@@ -1,4 +1,5 @@
 const userController = require('../controllers/UserController');
+const projectController = require('../controllers/ProjectController');
 
 module.exports = app => {
   app
@@ -7,6 +8,8 @@ module.exports = app => {
     .post(userController.createUser);
 
     app.route('/getUserByEmail').post(userController.getUserByEmail);
+
+    app.route('/project').post(projectController.createProject);
 
   /*app
     .route('/tasks/:taskId')
