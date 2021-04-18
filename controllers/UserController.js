@@ -17,7 +17,7 @@ exports.createUser = (req, res) => {
 };
 
 exports.getUser = (req, res) => {
-  user.findById(req.params.userId, (err, user) => {
+  user.findById(req.body.userId, (err, user) => {
     if (err) res.send(err);
     res.json(user);
   });

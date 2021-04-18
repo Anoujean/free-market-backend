@@ -1,12 +1,11 @@
 const userController = require('../controllers/UserController');
 
 module.exports = app => {
-  app
-    .route('/user')
-    .get(userController.getAllUsers)
-    .post(userController.createUser);
+  app.route('/addUser').post(userController.createUser);
 
-    app.route('/getUserByEmail').post(userController.getUserByEmail);
+  app.route('/getUserByEmail').post(userController.getUserByEmail);
+
+  app.route('/getUserByUserId').post(userController.getUser);
 
   /*app
     .route('/tasks/:taskId')
