@@ -10,9 +10,9 @@ exports.getAllProject = (req, res) => {
 
 exports.createProject = (req, res) => {
     const newProject = new project(req.body);
-    newProject.save((err, user) => {
+    newProject.save((err, project) => {
         if (err) res.send(err);
-        res.json(user);
+        res.json(project);
     });
 };
 
