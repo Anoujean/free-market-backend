@@ -3,7 +3,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
-global.Task = require('./models/UserModel');
+global.User = require('./models/UserModel');
 const routes = require('./routes/routes');
 
 mongoose.Promise = global.Promise;
