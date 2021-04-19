@@ -8,11 +8,12 @@ module.exports = app => {
 
   app.route('/getUserByUserId').post(userController.getUser);
 
-    app.route('/project').post(projectController.createProject);
+  app.route('/addProject').post(projectController.createProject);
 
-  /*app
-    .route('/tasks/:taskId')
-    .get(taskBuilder.read_a_task)
-    .put(taskBuilder.update_a_task)
-    .delete(taskBuilder.delete_a_task);*/
+  app.route('/getAllProjects').get(projectController.getAllProject);
+
+  app.route('/getProjectById').post(projectController.getProject);
+
+  app.route('/modifyUser').post(userController.updateUser);
+
 };

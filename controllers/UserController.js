@@ -32,7 +32,7 @@ exports.getUserByEmail = (req, res) => {
 
 exports.updateUser = (req, res) => {
   user.findOneAndUpdate(
-    { _id: req.params.userId },
+    { _id: req.body.userId },
     req.body,
     { new: true },
     (err, user) => {

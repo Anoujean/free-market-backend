@@ -17,9 +17,9 @@ exports.createProject = (req, res) => {
 };
 
 exports.getProject = (req, res) => {
-    project.findById(req.params.projectId, (err, user) => {
+    project.findById(req.body.projectId, (err, project) => {
         if (err) res.send(err);
-        res.json(user);
+        res.json(project);
     });
 };
 

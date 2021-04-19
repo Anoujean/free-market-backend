@@ -20,25 +20,24 @@ const projectSchema = new Schema(
             type: String,
             required: 'category cannot be blank'
         },
+        link: {
+            type: String
+        },
         email: {
             type: String,
             required: 'email cannot be blank'
         },
-        links: {
-            type: Array
-        },
         profilesRequired: {
-            type: Array
-        },
-        isOpen: {
-            type: Boolean,
-            required: 'cannot be blank'
+            type: String
         },
         dateStart: {
-            type: Date
+            type: String
         },
         dateEnd: {
-            type: Date
+            type: String
+        },
+        usersInvolved: {
+            type: Array
         }
     },
     { collection: 'Projects' }
